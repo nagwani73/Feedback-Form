@@ -1,0 +1,36 @@
+Files added/edited ==>
+
+/app/controllers/feedbacks_controller.rb
+  It has action create which adds a new feedback to the database
+	
+/app/models/Feedback.rb
+	Model for feedbacks table. Has few validation statements.
+	
+/app/views/layouts/my_account.html.erb
+	small changes. A new link and a javascript dialog box is added which contains the form for submitting feedback.
+	
+/app/uploaders/file_uploader.rb
+	class for attachment option in feedbacks.
+	
+/db/schema.rb
+	added this small code to the existing code
+	
+	create_table "feedbacks", :force => true do |t|
+    		t.string   "subject"
+    		t.text     "description"
+    		t.string   "email"
+    		t.datetime "created_at"
+    		t.datetime "updated_at"
+    		t.date     "feedback_date"
+    		t.integer  "userid"
+  	end
+	//this adds new table named feedbacks in the database
+  	
+/public/javascripts/feedback-dialog.js
+/public/javascripts/jquery-dialog.js
+	Simple javascript files for dialog box working
+	
+/public/stylesheets/dialog.css
+	Stylesheet for dialog box and overlay
+	
+

@@ -1,7 +1,8 @@
 Files added/edited ==>
 
 /app/controllers/feedbacks_controller.rb
-  It has action create which adds a new feedback to the database
+	It has action create which adds a new feedback to the database.
+	And an action error_report which handles the report fetching and mailing.
 	
 /app/models/Feedback.rb
 	Model for feedbacks table. Has few validation statements.
@@ -9,9 +10,16 @@ Files added/edited ==>
 /app/views/layouts/my_account.html.erb
 	small changes. A new link and a javascript dialog box is added which contains the form for submitting feedback.
 	
+/app/views/shared/_feedback_dialogbox.html.erb
+/app/views/shared/_report_form.html.erb
+app/views/report_mail/sendmail.html.erb
+		this is the template for mails to be send.
+
 /app/uploaders/file_uploader.rb
 	class for attachment option in feedbacks.
-	
+/app/mailers/report_mail.rb
+
+
 /db/schema.rb
 	added this small code to the existing code
 	
@@ -29,8 +37,12 @@ Files added/edited ==>
 /public/javascripts/feedback-dialog.js
 /public/javascripts/jquery-dialog.js
 	Simple javascript files for dialog box working
+/public/javascripts/submit-report.js
 	
 /public/stylesheets/dialog.css
 	Stylesheet for dialog box and overlay
 	
-
+/public/stylesheets/application.css
+		a very few additions.
+/wkhtmltoimage
+	a gem to convert html to an image
